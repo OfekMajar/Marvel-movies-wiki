@@ -1,0 +1,39 @@
+.grid-main{
+    display: flex;
+    gap: 1vw;
+  justify-content: center;
+}
+.movie-cover{
+    width:10vw ;
+    height: 10vh;
+}
+.cover-cont{
+    height: 120vh;
+    width: 80vw;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 1vh;
+}
+.movie-cover{
+    width: 10vw;
+    margin-right: 13vw;
+    border: 1px solid black;
+    height: 35vh;
+    position: relative;
+    background-color: #fff;
+}
+.movie-cover img{
+    width: 10vw;
+    height: 29vh;
+   display: flex;
+}
+.movie-cover div{
+   display: flex;
+justify-content: space-between;
+padding: 5px;
+}
+.movie-cover span i:hover{
+    color:blue;
+}
