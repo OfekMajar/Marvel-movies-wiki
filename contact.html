@@ -1,34 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Reset.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="contact.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="contact.css" />
     <title>Document</title>
-</head>
-<body>
-
-  <div class="grid-container">
-    <header class="grid-header">
+  </head>
+  <body>
+    <div class="grid-container">
+      <header class="grid-header">
         <div class="site-name">
-            <h1><a href="#">Marvel's cinamtic</a></h1>
-            <img class="spider-swing" src="https://clipart-library.com/img1/972978.gif" alt="">
+          <h1><a href="#">Marvel's cinamtic</a></h1>
+          <img
+            class="spider-swing"
+            src="https://clipart-library.com/img1/972978.gif"
+            alt="" />
         </div>
-       
+
         <nav>
           <ul class="nav-list">
             <li><a href="./index.html">Home</a></li>
             <li><a href="./video-gallery.html">Video Gallery</a></li>
             <li><a href="./movies.html">Movies</a></li>
+            <li><a href="./about.html">About us</a></li>
             <li><a href="./contact.html">Contact</a></li>
           </ul>
         </nav>
-        
-        </header>
-        <main class="grid-main"></main>
-        <footer class="grid-footer"></footer>
+      </header>
+      <main class="grid-main">
+        <div class="grid-contact">
+          <div class="main">
+            
+            <form action="">
+              <h2>Your request:</h2>
+              
+              <div class="input-row">
+                <div class="input-group">
+                  <label for="firstName">First name:</label>
+                  <input type="text" required placeholder="peter" />
+                </div>
+                <div class="input-group">
+                  <label for="lastName">Last name:</label>
+                  <input type="text" required placeholder="parker" />
+                </div>
+                <div class="input-group">
+                  <label for="email">Email:</label>
+                  <input type="email" required placeholder="xxxx@yyyy" />
+                </div>
+              </div>
+              <textarea class="big-screen-textarea"
+                name=""
+                id=""
+                cols="30"
+                rows="13"
+                required
+                placeholder="What's on you mind?"></textarea>
+                <textarea class="small-screen-textarea"
+                name=""
+                id=""
+                cols="30"
+                rows="6"
+                required
+                placeholder="What's on you mind?"></textarea>
+              
+                <button class="sumbit-btnbigscreen" type="submit">
+                  Sumbit
+                  <img
+                    src="https://static.vecteezy.com/system/resources/previews/012/782/675/original/avengers-logo-isolated-icon-free-vector.jpg"
+                    alt="" />
+                </button>
+                <button class="clear-btn-bigscreen" type="reset">Clear</button>
+                <div class="green-effect"></div>
+              
+                
+                 <div class="btn-row-phone">
+                  <button class="sumbit-btn" type="submit">
+                    Sumbit
+                    <img
+                      src="https://static.vecteezy.com/system/resources/previews/012/782/675/original/avengers-logo-isolated-icon-free-vector.jpg"
+                      alt="" />
+                  </button>
+                  <button class="clear-btn" type="reset">Clear</button>
+                  <div class="green-effect"></div>
+                  </div>
+
+            </form>
+          </div>
+
+          <div class="sidebar">
+            <div class="sidebar-content">
+              <h3>Our info</h3>
+              <div class="sidebar-row">
+                <span>Email:</span> <span>daasda@sda.com</span>
+              </div>
+              <div class="sidebar-row">
+                <span>Phone:</span> <span>+972 547851248</span>
+              </div>
+              <div class="sidebar-row">
+                <span>Address:</span> <span>yafo IL</span>
+              </div>
+              <img src="./imgs/Site-logo.webp" alt="" />
+            </div>
+          </div>
         </div>
-</body>
+      </main>
+      <footer class="grid-footer"></footer>
+    </div>
+  </body>
 </html>

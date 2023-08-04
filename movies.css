@@ -1,39 +1,85 @@
-.grid-main{
-    display: flex;
-    gap: 1vw;
+body {
+  min-height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.grid-main {
+  display: flex;
+  gap: 1vw;
   justify-content: center;
 }
-.movie-cover{
-    width:10vw ;
-    height: 10vh;
+.movie-cover {
+  width: 10vw;
+  height: 10vh;
 }
-.cover-cont{
-    height: 120vh;
-    width: 80vw;
-    flex-wrap: wrap;
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-    gap: 1vh;
+.cover-cont {
+  height: 120vh;
+  width: 80vw;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  gap: 1vh;
 }
-.movie-cover{
-    width: 10vw;
-    margin-right: 13vw;
+.movie-cover {
+  width: 10vw;
+  margin-right: 13vw;
+  border: 1px solid black;
+  height: 35vh;
+  position: relative;
+  background-color: #fff;
+}
+.movie-cover img {
+  width: 10vw;
+  height: 29vh;
+  display: flex;
+}
+.movie-cover div {
+  display: flex;
+  justify-content: space-between;
+  padding: 3px;
+  margin-bottom: 1px;
+}
+.movie-cover .likes {
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  flex-direction: column;
+  width: 50%;
+  border-left: 1px dotted black;
+  padding-bottom: 1px;
+}
+.movie-cover .likes .fa-thumbs-up {
+  align-self: flex-end;
+  order: -1;
+}
+
+.movie-cover span i:hover {
+  color: blue;
+}
+@media screen and (max-width: 600px) {
+  .cover-cont {
+  }
+  .movie-cover {
+    width: 50vw;
+    margin-right: w;
     border: 1px solid black;
     height: 35vh;
     position: relative;
     background-color: #fff;
-}
-.movie-cover img{
-    width: 10vw;
+    margin-left: auto;
+  }
+  .movie-cover img {
+    width: 60vw;
     height: 29vh;
-   display: flex;
-}
-.movie-cover div{
-   display: flex;
-justify-content: space-between;
-padding: 5px;
-}
-.movie-cover span i:hover{
-    color:blue;
+    display: flex;
+  }
+  .grid-container {
+    width: 100%;
+    min-height: 450vh;
+  }
+  .site-name {
+    display: none;
+  }
 }

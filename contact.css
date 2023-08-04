@@ -1,0 +1,195 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow-y: hidden;
+}
+.grid-container {
+  height: 100vh;
+  width: 100vw;
+  grid-template-rows: 8vh 84vh 8vh;
+}
+.grid-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.grid-contact {
+  display: grid;
+  grid-template-columns: 65% 35%;
+  grid-template-areas: "main sidebar";
+  width: 70vw;
+  height: 70vh;
+}
+.main {
+  grid-area: main;
+  background-color: rgb(255, 253, 253);
+  position: relative;
+}
+.sidebar {
+  grid-area: sidebar;
+  background-color: rgb(13, 0, 128);
+}
+form {
+  padding: 20px;
+}
+button {
+  cursor: pointer;
+}
+h2 {
+  font-size: large;
+  font-weight: bold;
+}
+.input-row {
+  display: flex;
+  margin-top: 25px;
+}
+
+input {
+  width: 50%;
+  border-bottom: 1px solid black;
+}
+textarea {
+  margin-top: 5vh;
+  border: 1px solid black;
+  width: 100%;
+}
+.clear-btn-bigscreen , .clear-btn{
+  background-image: url(https://cdnb.artstation.com/p/assets/images/images/025/744/221/large/karan-parekh-9-1-1.jpg?1586797139);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 8vh;
+  width: 8vw;
+  text-align: center;
+  color: white;
+  font-weight: 900;
+  font-size: 28px;
+}
+.clear-btn-bigscreen , .sumbit-btnbigscreen {
+  position: absolute;
+  bottom: 10vh;
+}
+.clear-btn-bigscreen{
+  left: 36vw;
+}
+
+.clear-btn:hover , .clear-btn-bigscreen:hover{
+  background-image: url(https://i.pinimg.com/originals/8a/8a/88/8a8a88ca16038b5e609985b69b81f855.gif);
+  color: rgba(0, 0, 0, 0);
+}
+.sumbit-btnbigscreen , .sumbit-btn{
+  height: 8vh;
+  width: 8vw;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-weight: 900;
+  font-size: 28px;
+  display: flex;
+  border: 1px solid black;
+  
+}
+
+.sumbit-btn img {
+  height: 55px;
+  width: 100px;
+}
+
+.btn-row-phone {
+  margin-top: 4vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sidebar-content {
+  padding: 5vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+h3 {
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+  text-decoration: underline;
+}
+.sidebar-row {
+  margin-top: 15px;
+  color: white;
+}
+.sidebar-content img {
+  margin-top: auto;
+}
+.small-screen-textarea{
+    display: none;
+}
+
+.green-effect{
+position: absolute;
+width: 1%;
+height: 1%;
+left: 50%;
+top: 50%;
+}
+ .clear-btn:active ~ .green-effect , .clear-btn-bigscreen:active ~ .green-effect{
+  animation: green-effect 0.2s;
+ }
+ @media screen and (min-width:600px) {
+  .btn-row-phone{display: none;}
+
+}
+@keyframes green-effect {
+  0%{
+    background-color: rgba(44, 176, 92, 0.582);
+  }
+  10%{
+    width: 1%;
+height: 1%;
+left: 50%;
+top: 50%;
+  }
+  90%{
+    width: 100%;
+height: 100%;
+left: 0%;
+top: 0%;
+  }
+  100%{display: none;}
+}
+@media screen and (max-width: 600px) {
+  .input-row {
+    flex-direction: column;
+    gap: 1vh;
+  }
+  .btn-row {
+  }
+  .sumbit-btn {
+    width: 45%;
+  }
+  .clear-btn {
+    width: 45%;
+  }
+  .sumbit-btnbigscreen{display: none;}
+  .clear-btn-bigscreen{display: none;}
+  .grid-contact {
+    display: grid;
+    grid-template-rows: 65% 35%;
+    grid-template-columns: 100%;
+    grid-template-areas:
+      "main"
+      "sidebar ";
+    width: 70vw;
+    height: 70vh;
+  }
+  .main {
+    width: 100%;
+  }
+  .sidebar-content img {
+    display: none;
+  }
+  .big-screen-textarea{
+    display: none;
+}
+  .small-screen-textarea{
+    display: block;
+}
+}
