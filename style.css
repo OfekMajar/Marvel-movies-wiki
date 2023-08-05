@@ -2,13 +2,14 @@ body{
     min-height: 100vh;
     width: 100vw;
     overflow-x: hidden;
+    background: linear-gradient(to right, #0b1033, #440a67, #6a0572, #87045b, #a9013b);
 }
 
 .grid-container{
   width: 100%;
   min-height: 150vh;
   display: grid;
-  grid-template-rows: 8vh 100% 8vh;
+  grid-template-rows: 8vh 100% 12vh;
   grid-template-areas: 
   "header header header"
   "main main main"
@@ -19,14 +20,14 @@ body{
   grid-area: header;
   
   display: flex;
-  background-color: gray;
+  background: linear-gradient(to right, #ed1d24, #f37e21, #fdba2c);
 justify-content: center;
   align-content: center;
   position: relative;
 }
 .grid-main{
   grid-area: main;
-  background-color:gray;
+  
   background-image: url(https://cdn.marvel.com/content/1x/a44.jpg);
   background-size: cover;
   background-repeat: no-repeat;background-position:center;
@@ -34,7 +35,8 @@ justify-content: center;
 }
 .grid-footer{
   grid-area: footer;
-  background-color: green;
+  background: linear-gradient(to right, #0b1033, #440a67, #6a0572, #87045b, #a9013b);
+  
 }
 nav {
   display: flex;
@@ -55,7 +57,7 @@ nav {
   top: 25%;
   left: 1vw;
   color: white;
-  text-shadow: 1px 1px 1px red;
+  text-shadow: 3px 1px 1px red,  5px 1px 1px blue;
     flex-direction: column;
 }
 .site-name img{
@@ -73,20 +75,77 @@ nav ul li :hover {
   text-decoration: underline;
   text-underline-position: under;
   transition: ease-in-out 20ms;
-  text-shadow: 2px 1px 1px red,  3px 1px 1px blue;
+  text-shadow: 3px 1px 1px red,  5px 1px 1px blue;
 }
+
+.grid-footer{
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-areas: "text links";
+}
+.footer-text{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 5rem;
+}
+.footer-links{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.github , .facebook , .linkedin{
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/2048px-Octicons-mark-github.svg.png);
+height: 10vh;
+width:100%;
+background-size: contain;
+background-position: center;
+background-repeat: no-repeat;
+border-left: 1px black solid;
+border-right: 1px black solid;
+}
+
+.facebook{
+  background-image: url(https://img.freepik.com/free-icon/facebook_318-194827.jpg);
+}
+.linkedin{
+  background-image: url(https://www.freepnglogos.com/uploads/linkedin-basic-round-social-logo-png-13.png);
+}
+
 @media screen and (max-width: 600px){
 
   .site-name {
     display: none;
+  }
+  .grid-footer{
+  display: flex;
+  flex-direction: column;
+  }
+  .footer-text{
+    grid-area: footer-text;
+    font-size: 32px;
+  }
+  .github , .facebook , .linkedin{
+    margin-top: 1vh;
+    height: 6vh;
   }
 }
 @media screen and (max-width: 536px){
 
   .grid-header nav ul li {
    
-    font-size: 4vw; 
+   
     font-size: 20px; 
   }
 }
+@media screen and (max-width: 436px){
+
+  .grid-header nav ul li {
+   
+   
+    font-size: 18px; 
+  }
+}
+
 
