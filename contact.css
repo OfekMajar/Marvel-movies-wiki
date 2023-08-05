@@ -53,58 +53,69 @@ textarea {
   border: 1px solid black;
   width: 100%;
 }
-.clear-btn-bigscreen , .clear-btn{
+.clear-btn-bigscreen,
+.clear-btn {
   background-image: url(https://cdnb.artstation.com/p/assets/images/images/025/744/221/large/karan-parekh-9-1-1.jpg?1586797139);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   height: 8vh;
-  width: 8vw;
   text-align: center;
   color: white;
   font-weight: 900;
   font-size: 28px;
 }
-.clear-btn-bigscreen , .sumbit-btnbigscreen {
-  position: absolute;
-  bottom: 10vh;
+.clear-btn-bigscreen {
+  width: 45%;
 }
-.clear-btn-bigscreen{
-  left: 36vw;
+.sumbit-btnbigscreen {
+  /* position: absolute;
+  bottom: 10vh; */
+}
+.clear-btn-bigscreen {
+  /* left: 36vw; */
 }
 
-.clear-btn:hover , .clear-btn-bigscreen:hover{
+.clear-btn:hover,
+.clear-btn-bigscreen:hover {
   background-image: url(https://i.pinimg.com/originals/8a/8a/88/8a8a88ca16038b5e609985b69b81f855.gif);
   color: rgba(0, 0, 0, 0);
 }
-.sumbit-btnbigscreen , .sumbit-btn{
+.sumbit-btnbigscreen,
+.sumbit-btn {
   height: 8vh;
-  width: 8vw;
+  width: 45%;
   text-align: center;
   color: rgb(0, 0, 0);
   font-weight: 900;
   font-size: 28px;
   display: flex;
   border: 1px solid black;
-  
+  align-items: center;
+  justify-content: center;
 }
-
-.sumbit-btn img {
-  height: 55px;
-  width: 100px;
+.btn-row-screen {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1vh;
+}
+.sumbit-btnbigscreen img {
+  height: 7vh;
+  width: fit-content;
 }
 
 .btn-row-phone {
-  margin-top: 4vh;
+  margin-top: 2vh;
   display: flex;
   justify-content: space-between;
 }
-
 .sidebar-content {
-  padding: 5vw;
-  height: 100%;
+  padding: 2vw;
+  height: 70vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
+  
 }
 h3 {
   font-size: 32px;
@@ -119,57 +130,84 @@ h3 {
 .sidebar-content img {
   margin-top: auto;
 }
-.small-screen-textarea{
-    display: none;
+.small-screen-textarea {
+  display: none;
+}
+.sidebar-textbox {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
-.green-effect{
-position: absolute;
-width: 1%;
-height: 1%;
-left: 50%;
-top: 50%;
+.green-effect {
+  position: absolute;
+  width: 1%;
+  height: 1%;
+  left: 50%;
+  top: 50%;
 }
- .clear-btn:active ~ .green-effect , .clear-btn-bigscreen:active ~ .green-effect{
+.clear-btn {
+  width: 45%;
+}
+.clear-btn:active ~ .green-effect,
+.clear-btn-bigscreen:active ~ .green-effect {
   animation: green-effect 0.2s;
- }
- @media screen and (min-width:600px) {
-  .btn-row-phone{display: none;}
+}
 
+@media screen and (min-width: 600px) {
+  .btn-row-phone {
+    display: none;
+  }
 }
 @keyframes green-effect {
-  0%{
+  0% {
     background-color: rgba(44, 176, 92, 0.582);
   }
-  10%{
+  10% {
     width: 1%;
-height: 1%;
-left: 50%;
-top: 50%;
+    height: 1%;
+    left: 50%;
+    top: 50%;
   }
-  90%{
+  90% {
     width: 100%;
-height: 100%;
-left: 0%;
-top: 0%;
+    height: 100%;
+    left: 0%;
+    top: 0%;
   }
-  100%{display: none;}
+  100% {
+    display: none;
+  }
 }
 @media screen and (max-width: 600px) {
   .input-row {
     flex-direction: column;
     gap: 1vh;
   }
-  .btn-row {
+  .sumbit-btn img {
+    height: 22.5px;
+    width: 50px;
+  }
+  button {
+    height: 3vh;
+    width: 3vw;
+    width: 45%;
+  }
+  button span {
+    font-size: 22px;
   }
   .sumbit-btn {
     width: 45%;
   }
-  .clear-btn {
+  .btn-row .clear-btn {
     width: 45%;
   }
-  .sumbit-btnbigscreen{display: none;}
-  .clear-btn-bigscreen{display: none;}
+  .sumbit-btnbigscreen {
+    display: none;
+  }
+  .clear-btn-bigscreen {
+    display: none;
+  }
   .grid-contact {
     display: grid;
     grid-template-rows: 65% 35%;
@@ -186,10 +224,10 @@ top: 0%;
   .sidebar-content img {
     display: none;
   }
-  .big-screen-textarea{
+  .big-screen-textarea {
     display: none;
-}
-  .small-screen-textarea{
+  }
+  .small-screen-textarea {
     display: block;
-}
+  }
 }

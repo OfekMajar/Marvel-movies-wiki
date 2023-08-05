@@ -81,5 +81,12 @@ nav ul li :hover {
     display: none;
   }
 }
+@media screen and (max-width: 536px){
 
+  .grid-header nav ul li {
+   
+    font-size: 4vw; 
+    font-size: 20px; 
+  }
+}
 
